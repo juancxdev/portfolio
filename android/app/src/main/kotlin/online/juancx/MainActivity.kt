@@ -1,0 +1,5 @@
+package online.juancx
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity()
