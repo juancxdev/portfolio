@@ -1,16 +1,40 @@
-# juancx
+# PORTFOLIO JUANCX
 
-A new Flutter project.
+## Creation project
+Command bash for create project with domain custom
+```bash
+flutter create --org online --project-name juancx portfolio
+````
+El resultado seroa online.juancx
 
-## Getting Started
+## Configuration deploy
+First, install firebase cli
+```bash
+npm install -g firebase-tools
+```
+Login firebase
+```bash
+firebase login
+```
+Install firebase core with dart
+```bash
+dart pub global activate flutterfire_cli
+````
+Instance project from firebase console
+```bash
+flutterfire configure --project=juancx-9e024
+```
+Init project firebase instance
+```base
+firebase init hosting
+```
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Deploy 
+Generate compilate
+```bash
+flutter build web
+```
+Deploy compilate
+```bash
+firebase deploy
+```
