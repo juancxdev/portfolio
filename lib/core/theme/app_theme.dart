@@ -7,35 +7,35 @@ class GlobalThemData {
       brightness: Brightness.dark,
       textTheme: TextTheme(
         displayLarge: TextStyle(
-          fontSize: 32.0,
+          fontSize: 64.0,
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontFamily: 'Roboto', // Fuente para encabezados
         ),
         displayMedium: TextStyle(
-          fontSize: 24.0,
+          fontSize: 56.0,
           color: Colors.white,
           fontFamily: 'Roboto', // Fuente para texto del cuerpo
         ),
         displaySmall: TextStyle(
-          fontSize: 16.0,
+          fontSize: 48.0,
           color: Colors.white,
           fontFamily: 'Roboto', // Fuente para texto del cuerpo
         ),
         headlineLarge: TextStyle(
-          fontSize: 28.0,
+          fontSize: 36.0,
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontFamily: 'Roboto',
         ),
         headlineMedium: TextStyle(
-          fontSize: 20.0,
+          fontSize: 32.0,
           fontWeight: FontWeight.w600,
           color: Colors.white,
           fontFamily: 'Roboto',
         ),
         headlineSmall: TextStyle(
-          fontSize: 18.0,
+          fontSize: 24.0,
           fontWeight: FontWeight.w500,
           color: Colors.white,
           fontFamily: 'Roboto',

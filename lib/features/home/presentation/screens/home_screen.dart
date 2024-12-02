@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:juancx/core/styles/spacing.dart';
+import 'package:juancx/features/home/presentation/screens/main_section/main_section_desktop.dart';
+import 'package:juancx/features/home/presentation/screens/main_section/main_section_mobile.dart';
+import 'package:juancx/features/home/presentation/screens/main_section/main_section_tablet.dart';
+import 'package:juancx/features/shared/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,21 +13,25 @@ class HomeScreen extends StatelessWidget {
     return Container(
       constraints: SpacingConstants.boxMaxWContainer(),
       margin: SpacingConstants.marginWHContainer(),
-      color: Colors.blue,
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          return Wrap(
-            direction: Axis.vertical,
-            children: [
-              Container(
-                width: constraints.maxWidth,
-                height: 400,
-                color: Colors.red,
-                child: Text("sdsdsd"),
-              )
-            ],
-          );
-        },
+      child: Wrap(
+        direction: Axis.vertical,
+        children: [
+          ResponsiveWidget(
+              mobile: MainSectionMobile(),
+              tablet: MainSectionTablet(),
+              desktop: MainSectionDesktop()),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: DefaultButtonWidget(function: () {}),
+          ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: DefaultButtonWidget(
+              function: () {},
+              staticHeigth: true,
+            ),
+          )
+        ],
       ),
     );
   }
