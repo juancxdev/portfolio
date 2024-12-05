@@ -17,20 +17,10 @@ class HomeScreen extends StatelessWidget {
         direction: Axis.vertical,
         children: [
           ResponsiveWidget(
-              mobile: MainSectionMobile(),
-              tablet: MainSectionTablet(),
-              desktop: MainSectionDesktop()),
-          Padding(
-            padding: EdgeInsets.all(20),
-            child: DefaultButtonWidget(function: () {}),
+            mobile: MainSectionMobile(),
+            tablet: MainSectionTablet(),
+            desktop: MainSectionDesktop(),
           ),
-          Padding(
-            padding: EdgeInsets.all(20),
-            child: DefaultButtonWidget(
-              function: () {},
-              staticHeigth: true,
-            ),
-          )
         ],
       ),
     );

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:juancx/core/styles/spacing.dart';
+
+import 'package:juancx/features/home/presentation/widgets/widgets.dart';
 import 'package:juancx/features/shared/widgets/widgets.dart';
 
 class MainSectionDesktop extends StatelessWidget {
@@ -57,9 +60,7 @@ class MainSectionDesktop extends StatelessWidget {
           Expanded(
             flex: 5,
             child: Container(
-              height: 234,
-              color: Colors.blue,
-              child: Text("data"),
+              child: StateMachineMuscot(),
             ),
           ),
         ],

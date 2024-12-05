@@ -1,4 +1,3 @@
-import 'dart:html' as html;
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
@@ -29,7 +28,6 @@ final GoRouter appRouter = GoRouter(
           name: RouterConstants.nameHome(),
           path: RouterConstants.pathHome(),
           builder: (BuildContext context, GoRouterState state) {
-            html.document.title = 'Home Page';
             return const HomeScreen();
           },
         ),
@@ -38,7 +36,6 @@ final GoRouter appRouter = GoRouter(
           name: RouterConstants.nameAbout(),
           path: RouterConstants.pathAbout(),
           builder: (BuildContext context, GoRouterState state) {
-            html.document.title = 'About Page';
             return const SizedBox();
           },
         ),
@@ -47,7 +44,6 @@ final GoRouter appRouter = GoRouter(
           name: RouterConstants.namePortfolio(),
           path: RouterConstants.pathPortfolio(),
           builder: (BuildContext context, GoRouterState state) {
-            html.document.title = 'Portfolio Page';
             return const SizedBox();
           },
         ),
@@ -56,7 +52,6 @@ final GoRouter appRouter = GoRouter(
           name: RouterConstants.nameContact(),
           path: RouterConstants.pathContact(),
           builder: (BuildContext context, GoRouterState state) {
-            html.document.title = 'Slide Page';
             return const SizedBox();
           },
         ),
