@@ -26,7 +26,7 @@ class _StateMachineMuscotState extends State<StateMachineMuscot> {
       // Inicializa Rive antes de importar el archivo
       await RiveFile.initialize();
 
-      final data = await rootBundle.load('rive/dash_flutter_mascot.riv');
+      final data = await rootBundle.load('images/rive/dash_flutter_mascot.riv');
       final file = RiveFile.import(data);
       final artboard = file.mainArtboard;
       var controller = StateMachineController.fromArtboard(artboard, 'birb');
