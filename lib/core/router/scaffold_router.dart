@@ -15,21 +15,22 @@ class ScaffoldRouter extends StatelessWidget {
     final canvasBody = MediaQuery.of(context).size;
 
     return Scaffold(
+        backgroundColor: Theme.of(context).canvasColor,
         body: SingleChildScrollView(
-      child: SizedBox(
-        width: canvasBody.width,
-        // decoration: BoxDecoration(
-        //   image: DecorationImage(image: image)
-        // ),
-        child: Column(
-          children: [
-            NavbarWidget(
-              currentPath: GoRouterState.of(context).uri.path,
+          child: SizedBox(
+            width: canvasBody.width,
+            // decoration: BoxDecoration(
+            //   image: DecorationImage(image: image)
+            // ),
+            child: Column(
+              children: [
+                NavbarWidget(
+                  currentPath: GoRouterState.of(context).uri.path,
+                ),
+                child
+              ],
             ),
-            child
-          ],
-        ),
-      ),
-    ));
+          ),
+        ));
   }
 }

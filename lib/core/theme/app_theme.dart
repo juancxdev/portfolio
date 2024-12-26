@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class GlobalThemData {
   static ThemeData darkTheme = ThemeData(
-      canvasColor: Color(0xFF21242B),
+      canvasColor: Color(0xFF141317),
       primaryColor: const Color(0xFFEB6730),
       brightness: Brightness.dark,
       textTheme: TextTheme(

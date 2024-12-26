@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class SpacingConstants {
   static const double _maxWContainer = 1024;
-  static const double _marginWContainer = 24;
+  static const double _marginWContainer = 64;
+  static const double _marginWContainerMobile = 24;
 
   static BoxConstraints boxMaxWContainer() =>
       BoxConstraints(maxWidth: _maxWContainer);
@@ -11,6 +12,14 @@ class SpacingConstants {
       EdgeInsets.symmetric(horizontal: _marginWContainer);
   static EdgeInsets marginWHContainer() =>
       EdgeInsets.symmetric(horizontal: _marginWContainer, vertical: 48);
+
+  static EdgeInsets marginWContainerMobile() =>
+      EdgeInsets.symmetric(horizontal: _marginWContainerMobile);
+  static EdgeInsets marginWHContainerMobile() =>
+      EdgeInsets.symmetric(horizontal: _marginWContainerMobile, vertical: 48);
+
+  static EdgeInsets marginQuoteMainContainer() =>
+      EdgeInsets.symmetric(horizontal: _marginWContainerMobile, vertical: 112);
 
   static double getOnlyMarginWContainer() => _marginWContainer * 2;
 
