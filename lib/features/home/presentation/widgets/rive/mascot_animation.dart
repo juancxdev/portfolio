@@ -3,13 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
 
 class StateMachineMuscot extends StatefulWidget {
-  const StateMachineMuscot({Key? key}) : super(key: key);
+  const StateMachineMuscot({super.key});
 
   @override
-  _StateMachineMuscotState createState() => _StateMachineMuscotState();
+  StateMachineMuscotState createState() => StateMachineMuscotState();
 }
 
-class _StateMachineMuscotState extends State<StateMachineMuscot> {
+class StateMachineMuscotState extends State<StateMachineMuscot> {
   Artboard? riveArtboard;
   SMIBool? isDance; //wait change value
   SMITrigger? isLookUp; //one time
@@ -51,31 +51,10 @@ class _StateMachineMuscotState extends State<StateMachineMuscot> {
   @override
   Widget build(BuildContext context) => riveArtboard == null
       ? const SizedBox()
-      : Column(
-          children: [
-            SizedBox(
-              height: 300,
-              child: Rive(
-                artboard: riveArtboard!,
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text('Dance'),
-                Switch(
-                  value: isDance!.value,
-                  onChanged: (value) => toggleDance(value),
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            ElevatedButton(
-              child: const Text('Look up'),
-              onPressed: () => isLookUp?.value = true,
-            ),
-            const SizedBox(height: 12),
-          ],
+      : AspectRatio(
+          aspectRatio: 1,
+          child: Rive(
+            artboard: riveArtboard!,
+          ),
         );
 }

@@ -15,17 +15,12 @@ class ResponsiveWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      // If our width is more than 768 then we consider it a desktop
       builder: (context, constraints) {
-        if (constraints.maxWidth >= 768) {
+        if (constraints.maxWidth > 1200) {
           return desktop;
-        }
-        // If width it less then 512 and more then 650 we consider it as tablet
-        else if (constraints.maxWidth >= 512) {
+        } else if (constraints.maxWidth > 768) {
           return tablet;
-        }
-        // Or less then that we called it mobile
-        else {
+        } else {
           return mobile;
         }
       },

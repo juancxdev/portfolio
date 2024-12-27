@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class QuoteWidget extends StatelessWidget {
+class PhraseWidget extends StatelessWidget {
   final String text;
-  const QuoteWidget({super.key, this.text = "Contexto"});
+  const PhraseWidget({super.key, this.text = "Contexto"});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,17 +15,15 @@ class QuoteWidget extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            padding: EdgeInsets.symmetric(horizontal: 56, vertical: 16),
+            padding: EdgeInsets.symmetric(horizontal: 48, vertical: 24),
             decoration: BoxDecoration(
               color: Color(0xff27292D),
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Expanded(
-              child: Text(
-                text,
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20),
-              ),
+            child: SelectableText(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20),
             ),
           ),
           Positioned(

@@ -10,10 +10,11 @@ class TitleSectionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: Row(
+      child: Wrap(
+        spacing: 16,
+        direction: Axis.horizontal,
         children: [
-          Wrap(
-            spacing: 4,
+          Row(
             children: [
               Text(
                 '#',
@@ -23,6 +24,9 @@ class TitleSectionWidget extends StatelessWidget {
                   fontFamily: 'Fira Code',
                   fontWeight: FontWeight.w500,
                 ),
+              ),
+              SizedBox(
+                width: 6,
               ),
               Text(
                 title.toLowerCase(),
@@ -35,12 +39,13 @@ class TitleSectionWidget extends StatelessWidget {
               ),
             ],
           ),
-          Expanded(
-              child: Container(
-            color: Theme.of(context).primaryColor,
+          Container(
             height: 2,
+            width: double.infinity,
+            color: Theme.of(context).primaryColor,
             margin: SpacingConstants.marginWContainer(),
-          )),
+            constraints: BoxConstraints(maxWidth: 222),
+          ),
           navigation != null
               ? GestureDetector(
                   onScaleUpdate: (details) => debugPrint(details.toString()),
