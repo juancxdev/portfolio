@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:juancx/core/env/constants.dart';
 import 'package:juancx/core/styles/spacing.dart';
-import 'package:juancx/features/shared/utils/responsive/responsive_util.dart';
 import 'package:juancx/features/shared/widgets/navigation/navbar_item_widget.dart';
 
 class NavbarWidget extends StatelessWidget {
