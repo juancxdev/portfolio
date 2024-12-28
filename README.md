@@ -32,7 +32,7 @@ firebase init hosting
 ## Deploy 
 Generate compilate
 ```bash
-flutter build web
+flutter build web --web-renderer html
 ```
 Deploy compilate
 ```bash
