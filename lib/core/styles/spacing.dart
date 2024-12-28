@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SpacingConstants {
-  static const double _maxWContainer = 896;
+  static const double _maxWContainer = 960;
   static const double _marginWContainer = 64;
   static const double _marginWContainerMobile = 24;
 
