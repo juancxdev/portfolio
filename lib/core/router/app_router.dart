@@ -15,7 +15,7 @@ final List<String> listItemsNavigation = RouterConstants.getKeys();
 
 final GoRouter appRouter = GoRouter(
   navigatorKey: _rootNavigatorKey,
-  initialLocation: RouterConstants.pathHome(),
+  initialLocation: RouterConstants.pathAbout(),
   debugLogDiagnostics: true,
   routes: <RouteBase>[
     ShellRoute(
@@ -25,16 +25,16 @@ final GoRouter appRouter = GoRouter(
       },
       routes: <RouteBase>[
         GoRoute(
-          name: RouterConstants.nameHome(),
-          path: RouterConstants.pathHome(),
+          name: RouterConstants.nameAbout(),
+          path: RouterConstants.pathAbout(),
           builder: (BuildContext context, GoRouterState state) {
             return const HomeScreen();
           },
         ),
 
         GoRoute(
-          name: RouterConstants.nameAbout(),
-          path: RouterConstants.pathAbout(),
+          name: RouterConstants.nameResumen(),
+          path: RouterConstants.pathResumen(),
           builder: (BuildContext context, GoRouterState state) {
             return const SizedBox();
           },

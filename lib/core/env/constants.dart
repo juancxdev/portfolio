@@ -1,21 +1,21 @@
 class RouterConstants {
   // Mapa de rutas
   static const Map<String, String> _pathsKeyValue = {
-    'Home': '/',
-    'About': '/about',
+    'About': '/',
+    'Resumen': '/resumen',
     'Portfolio': '/portfolio',
     'Contact': '/contact',
     'Slides': '/slides',
   };
 
-  static String nameHome() => "Home";
   static String nameAbout() => "About";
+  static String nameResumen() => "Resumen";
   static String namePortfolio() => "Portfolio";
   static String nameContact() => "Contact";
   static String nameSlides() => "Slides";
 
-  static String pathHome() => getPath("Home");
   static String pathAbout() => getPath("About");
+  static String pathResumen() => getPath("Resumen");
   static String pathPortfolio() => getPath("Portfolio");
   static String pathContact() => getPath("Contact");
   static String pathSlides() => getPath("Slides");
