@@ -18,8 +18,8 @@ class AboutSectionWidget extends StatelessWidget {
                 text: "About me",
               ),
               Text(
-                "A passionate Flutter developer with strong expertise in cross-platform apps, REST APIs, UI/UX, widgets, and state management solutions. Proven track record in delivering cutting-edge solutions, including API integration, third-party libraries, and performance optimization. Adept at debugging to ensure high-quality, responsive apps and An agile collaborator committed to staying current with industry trends.\n\n"
-                "If you're seeking a skilled Flutter developer to breathe life into your project and exceed your expectations, I am here to collaborate and create magic together. Reach out, and let's transform your vision into a reality!",
+                "Software Engineer with expertise in Golang, PostgreSQL, and mobile development using Kotlin and Swift. Proven track record in delivering cutting-edge solutions, including API development, database optimization, and cross-platform mobile applications. Experienced in remote work environments, demonstrating adaptability and collaboration skills across multiple teams and projects.\n\n"
+                "Specializing in backend and mobile development, I build solutions that merge technical excellence with practical implementation.",
                 textAlign: TextAlign.justify,
                 style: Theme.of(context).textTheme.bodyLarge,
               ),

@@ -42,16 +42,6 @@ class _StickyNavbarItemWidgetState extends State<StickyNavbarItemWidget> {
           decoration: BoxDecoration(
             color: _getBackgroundColor(),
             borderRadius: BorderRadius.circular(8.0),
-            boxShadow: isPressed
-                ? []
-                : [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 1,
-                      blurRadius: 3,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
           ),
           child: Text(
             widget.text.toUpperCase(),

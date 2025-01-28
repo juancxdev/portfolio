@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:juancx/core/styles/spacing.dart';
-import 'package:juancx/features/shared/utils/responsive/responsive_util.dart';
 import 'package:juancx/features/shared/utils/slivers/sticky_sliver.dart';
 import 'package:juancx/features/shared/widgets/navigation/sticky_navbar_widget.dart';
 import 'package:juancx/features/shared/widgets/widgets.dart';
@@ -17,8 +16,6 @@ class ScaffoldRouter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = getScreenSize(context);
-
     return Scaffold(
       backgroundColor: Theme.of(context).canvasColor,
       body: SizedBox.expand(
