@@ -56,7 +56,7 @@ class ScaffoldRouter extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(top: 8, bottom: 16),
                       child: Text(
-                        'Senior Web Engineer • Creative Developer • International Speaker',
+                        'Backend Developer • Mobile Developer',
                         style: TextStyle(
                           color: const Color(0xFFADADAD),
                           fontSize: 16,
@@ -98,7 +98,8 @@ class ScaffoldRouter extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Container(
                   constraints: SpacingConstants.boxMaxWContainer(),
-                  padding: EdgeInsets.only(top: 24, bottom: 80),
+                  padding:
+                      EdgeInsets.only(top: 24, left: 24, right: 24, bottom: 80),
                   child: child,
                 ),
               ),

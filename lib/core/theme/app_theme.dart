@@ -42,7 +42,7 @@ class GlobalThemData {
         fontFamily: 'Roboto',
       ),
       titleLarge: TextStyle(
-        fontSize: 22.0,
+        fontSize: 20.0,
         fontWeight: FontWeight.bold,
         color: Colors.white,
         fontFamily: 'Roboto',
