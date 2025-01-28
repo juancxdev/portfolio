@@ -24,20 +24,20 @@ class GlobalThemData {
         fontFamily: 'Roboto', // Fuente para texto del cuerpo
       ),
       headlineLarge: TextStyle(
-        fontSize: 36.0,
+        fontSize: 32.0,
         fontWeight: FontWeight.bold,
         color: Colors.white,
         fontFamily: 'Roboto',
       ),
       headlineMedium: TextStyle(
-        fontSize: 32.0,
-        fontWeight: FontWeight.w600,
+        fontSize: 24.0,
+        fontWeight: FontWeight.bold,
         color: Colors.white,
         fontFamily: 'Roboto',
       ),
       headlineSmall: TextStyle(
-        fontSize: 24.0,
-        fontWeight: FontWeight.w500,
+        fontSize: 22.0,
+        fontWeight: FontWeight.w600,
         color: Colors.white,
         fontFamily: 'Roboto',
       ),

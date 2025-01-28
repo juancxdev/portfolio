@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import 'package:juancx/core/env/constants.dart';
 import 'package:juancx/core/router/scaffold_router.dart';
-import 'package:juancx/features/home/home.dart';
+import 'package:juancx/features/landing/presentation/sections/about_section/about_section_widget.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -28,7 +28,7 @@ final GoRouter appRouter = GoRouter(
           name: RouterConstants.nameAbout(),
           path: RouterConstants.pathAbout(),
           builder: (BuildContext context, GoRouterState state) {
-            return const HomeScreen();
+            return const AboutSectionWidget();
           },
         ),
 

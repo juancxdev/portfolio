@@ -5,6 +5,7 @@ import 'package:juancx/features/shared/utils/responsive/responsive_util.dart';
 import 'package:juancx/features/shared/utils/slivers/sticky_sliver.dart';
 import 'package:juancx/features/shared/widgets/navigation/sticky_navbar_widget.dart';
 import 'package:juancx/features/shared/widgets/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ScaffoldRouter extends StatelessWidget {
   const ScaffoldRouter({
@@ -26,7 +27,7 @@ class ScaffoldRouter extends StatelessWidget {
             SliverToBoxAdapter(
               child: Container(
                 margin: EdgeInsets.only(top: 80),
-                padding: EdgeInsets.symmetric(vertical: 48, horizontal: 24),
+                padding: SpacingConstants.marginWHContainerMobile(),
                 child: Column(
                   children: [
                     Container(
@@ -52,33 +53,34 @@ class ScaffoldRouter extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    Text(
-                      'Senior Web Engineer • Creative Developer • International Speaker',
-                      style: TextStyle(
-                        color: const Color(0xFFADADAD),
-                        fontSize: 16,
+                    Container(
+                      margin: EdgeInsets.only(top: 8, bottom: 16),
+                      child: Text(
+                        'Senior Web Engineer • Creative Developer • International Speaker',
+                        style: TextStyle(
+                          color: const Color(0xFFADADAD),
+                          fontSize: 16,
+                        ),
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 16,
+                      runSpacing: 8,
                       children: [
-                        Row(
-                          children: [
-                            Text(
-                              'Ex-Google',
-                              style: TextStyle(color: const Color(0xFF787878)),
-                            ),
-                          ],
+                        SocialIconButtonWidget(
+                          iconPath: 'icons/icon-linkedin.svg',
+                          onTap: () => launchUrl(
+                            Uri.parse('https://www.linkedin.com/in/juancx/'),
+                            mode: LaunchMode.externalApplication,
+                          ),
                         ),
-                        const SizedBox(width: 16),
-                        Row(
-                          children: [
-                            Text(
-                              'Developer Relations',
-                              style: TextStyle(color: const Color(0xFF787878)),
-                            ),
-                          ],
+                        SocialIconButtonWidget(
+                          iconPath: 'icons/icon-github.svg',
+                          onTap: () => launchUrl(
+                            Uri.parse('https://github.com/juancxdev'),
+                            mode: LaunchMode.externalApplication,
+                          ),
                         ),
                       ],
                     ),
@@ -93,26 +95,12 @@ class ScaffoldRouter extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child: Container(
-                height: 300,
-                color: Colors.red,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: Container(
-                height: 300,
-                color: Colors.red,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: Container(
-                height: 300,
-                color: Colors.red,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: Container(
-                height: 300,
-                color: Colors.red,
+                alignment: Alignment.center,
+                child: Container(
+                  constraints: SpacingConstants.boxMaxWContainer(),
+                  padding: EdgeInsets.only(top: 24, bottom: 80),
+                  child: child,
+                ),
               ),
             ),
           ],
@@ -121,70 +109,3 @@ class ScaffoldRouter extends StatelessWidget {
     );
   }
 }
-
-
-
-/*Container(
-                constraints: SpacingConstants.boxMaxWContainer(),
-                margin: SpacingConstants.marginWHContainer(),
-                width: double.infinity,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 128,
-                      height: 128,
-                      margin: EdgeInsets.symmetric(
-                        vertical: 48,
-                      ),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: NetworkImage(
-                              'https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      'Jhey Tompkins',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      'Senior Web Engineer • Creative Developer • International Speaker',
-                      style: TextStyle(
-                        color: const Color(0xFFADADAD),
-                        fontSize: 16,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              'Ex-Google',
-                              style: TextStyle(color: const Color(0xFF787878)),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(width: 16),
-                        Row(
-                          children: [
-                            Text(
-                              'Developer Relations',
-                              style: TextStyle(color: const Color(0xFF787878)),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              )*/
