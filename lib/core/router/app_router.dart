@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import 'package:juancx/core/env/constants.dart';
 import 'package:juancx/core/router/scaffold_router.dart';
-import 'package:juancx/features/landing/presentation/sections/about_section/about_section_widget.dart';
+import 'package:juancx/features/landing/home.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -44,7 +44,7 @@ final GoRouter appRouter = GoRouter(
           name: RouterConstants.namePortfolio(),
           path: RouterConstants.pathPortfolio(),
           builder: (BuildContext context, GoRouterState state) {
-            return const SizedBox();
+            return const PortfolioSectionWidget();
           },
         ),
 

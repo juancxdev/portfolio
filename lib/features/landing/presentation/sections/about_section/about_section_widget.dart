@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:juancx/core/styles/spacing.dart';
-import 'package:juancx/features/landing/presentation/sections/about_section/widgets/doing_widget.dart';
 import 'package:juancx/features/shared/widgets/widgets.dart';
+
+import 'widgets/skills_widget.dart';
+import 'widgets/doing_widget.dart';
 
 class AboutSectionWidget extends StatelessWidget {
   const AboutSectionWidget({super.key});
@@ -12,6 +14,7 @@ class AboutSectionWidget extends StatelessWidget {
       children: [
         Container(
           padding: SpacingConstants.marginBottomHSection(),
+          color: Theme.of(context).canvasColor,
           child: Column(
             children: [
               TitleH1Section(
@@ -28,6 +31,7 @@ class AboutSectionWidget extends StatelessWidget {
         ),
         Container(
           padding: SpacingConstants.marginBottomHSection(),
+          color: Theme.of(context).canvasColor,
           child: Column(
             children: [
               TitleH2Section(
@@ -35,8 +39,31 @@ class AboutSectionWidget extends StatelessWidget {
               ),
               Wrap(
                 spacing: 48,
-                children: [DoingWidget(), DoingWidget()],
+                children: [
+                  DoingWidget(
+                      icon: "develop-mobile",
+                      title: "Develop Mobile Apps",
+                      description:
+                          "Professional development of applications for Android and ios."),
+                  DoingWidget(
+                      icon: "develop-backend",
+                      title: "Develop Web Service",
+                      description:
+                          "Professional development of applications for Android and ios.")
+                ],
               ),
+            ],
+          ),
+        ),
+        Container(
+          padding: SpacingConstants.marginBottomHSection(),
+          color: Theme.of(context).canvasColor,
+          child: Column(
+            children: [
+              TitleH2Section(
+                text: "Skills",
+              ),
+              SkillsWidget()
             ],
           ),
         ),

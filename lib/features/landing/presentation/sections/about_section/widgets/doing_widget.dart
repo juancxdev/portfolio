@@ -3,7 +3,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class DoingWidget extends StatelessWidget {
   final String icon;
-  const DoingWidget({super.key, this.icon = 'mobile'});
+  final String title;
+  final String description;
+  const DoingWidget(
+      {super.key,
+      this.icon = 'mobile',
+      this.title = "Title",
+      this.description = "Description"});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +24,7 @@ class DoingWidget extends StatelessWidget {
       child: Row(
         children: [
           SvgPicture.asset(
-            "icons/icon-$icon-section.svg",
+            "icons/icon-$icon.svg",
             width: 48,
             height: 48,
             colorFilter: ColorFilter.mode(
@@ -32,12 +38,12 @@ class DoingWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Develop Mobile Apps',
+                  title,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Professional development of applications for Android and ios.',
+                  description,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],
